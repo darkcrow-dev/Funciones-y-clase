@@ -24,5 +24,9 @@ class Operaciones:
             self.Operador = divide(Numero1, Numero2)
 
 """ Programa principal del codigo """
-t = Operaciones(10, 3, 'suma')
+numero1 = float(input("Teclee el primer numero: "))
+numero2 = float(input("Teclee el segundo numero: "))
+operacion = input("Teclee la operacion a realizar: ")
+
+t = Operaciones(numero1, numero2, operacion)
 print("El resultado es: ", t.Operador)
