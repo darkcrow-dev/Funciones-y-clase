@@ -14,19 +14,21 @@ def divide(x, y):       #Funcion para dividir 2 numeros
 class Operaciones:
     def __init__(self, Numero1, Numero2, Operador):
 
-        if Operador == 'suma':
+        if Operador.upper() == 'SUMA':
             self.Operador = suma(Numero1, Numero2)
-        elif Operador == 'resta':
+        elif Operador.upper() == 'RESTA':
             self.Operador = resta(Numero1, Numero2)
-        elif Operador == 'multiplicacion':
+        elif Operador.upper() == 'MULTIPLICACION':
             self.Operador = multiplica(Numero1, Numero2)
-        elif Operador == 'division':
+        elif Operador.upper() == 'DIVISION':
             self.Operador = divide(Numero1, Numero2)
 
 """ Programa principal del codigo """
 numero1 = float(input("Teclee el primer numero: "))
 numero2 = float(input("Teclee el segundo numero: "))
-operacion = input("Teclee la operacion a realizar: ")
+operacion = input("Teclee la operacion a realizar entre suma, resta, multiplicacion o division: ")
+
+print("\n", operacion.upper())
 
 t = Operaciones(numero1, numero2, operacion)
-print("El resultado es: ", t.Operador)
+print("\nEl resultado es: ", t.Operador)
